@@ -7,5 +7,7 @@
     "^.+\\.(t|j)s$": "ts-jest"
   },
   "coverageDirectory": "./coverage-e2e",
-  "testTimeout": 30000
+  "testTimeout": 30000,
+  "globalSetup": "<rootDir>/backend/test/setup-e2e.ts",
+  "globalTeardown": "<rootDir>/backend/test/teardown-e2e.ts"
 }

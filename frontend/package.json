@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:e2e": "echo 'No E2E tests included in this scaffold. Candidates should add tests.' && exit 0",
-    "test:e2e:ui": "npm run test:e2e",
-    "test:e2e:headed": "npm run test:e2e"
+    "test:e2e": "npx playwright test",
+    "test:e2e:ci": "npx playwright install --with-deps && npx playwright test --project=chromium --reporter=list",
+    "test:e2e:headed": "npx playwright test --headed",
+    "test:e2e:ui": "npx playwright show-report || echo \"No Playwright report available\""
   },
   "dependencies": {
     "next": "14.0.4",
